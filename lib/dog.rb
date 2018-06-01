@@ -41,8 +41,8 @@ class Dog
                   INSERT INTO dogs (name, breed)
                   VALUES (?,?)
               SQL
-              DB[:conn].execute(sql, self.name, self.breed)            
-              
+              DB[:conn].execute(sql, self.name, self.breed)
+
               resultset = DB[:conn].execute("SELECT * FROM dogs")
               @id = resultset[0][0]
               new_dog = Dog.new(id: resultset[0], name: resultset[1], breed: resultset[2])
