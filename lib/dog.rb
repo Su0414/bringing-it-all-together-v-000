@@ -77,7 +77,7 @@ class Dog
 
   def self.new_from_db(row)
     if !row.empty?
-        Dog.new(row)
+        Dog.new(id: row[0], name: row[1], breed: row[2])
    end
   end
 
