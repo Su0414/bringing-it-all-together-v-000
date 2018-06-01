@@ -85,6 +85,7 @@ class Dog
     binding.pry
     result = DB[:conn].execute("SELECT * FROM dogs WHERE name = ?", name)
     binding.pry
+    found_dog = self.find_by_id(result[0][0])
   end
 
   def update
