@@ -82,9 +82,9 @@ class Dog
   end
 
   def self.find_by_name(name)
-    binding.pry 
+    binding.pry
     result = DB[:conn].execute("SELECT * FROM dogs WHERE name = ?", name)
-    binding.pry     
+    binding.pry
   end
 
   def update
