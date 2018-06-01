@@ -88,7 +88,7 @@ class Dog
   end
 
   def update
-
+    self.find_by_name(@name)
   end
 
 end
