@@ -88,7 +88,9 @@ class Dog
   end
 
   def update
-    self.find_by_name(@name)
+    sql = "UPDATE dogs SET name = ?, breed = ? WHERE name = ?"
+    result = DB[:conn].execute(sql, self.name, self.breed, self.name)
+    binding.pry
   end
 
 end
